@@ -44,7 +44,7 @@ test2(name: "あいうえお")
 /* このコメントアウトを外して答えを書こう
  let closure2 = /*ここに無名関数を書こう*/
  //実行
- clousre2(name: あいうえお)
+ closure2("あいうえお")
  */
 
 
@@ -64,6 +64,6 @@ print(rtnTest3)
 /* このコメントアウトを外して答えを書こう
 let closure3 = /*ここに無名関数を書こう*/
 //実行
-let rtnCls3 = clousre3(name: あいうえお)
+let rtnCls3 = closure3("あいうえお")
 print(rtnCls3)
 */
