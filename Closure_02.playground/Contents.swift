@@ -6,7 +6,7 @@ import Foundation
  func test()のパラメータにクロージャーを入れて3秒後に"Hello Closure"という文字が出るようにしてください
  */
 
-func test1(completion: /*ここに無名関数を受け取れる型を書こう*/) {
+func test1(completion: (()->Void)? = nil) {
     print("３秒後にcompletionが実行されるよ")
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
         completion?()
@@ -33,7 +33,7 @@ test1(completion: {
  func test2()のパラメータに、文字列をパラメータにもつクロージャーを入れて3秒後に"Hello Test, Hello Closure"という文字が出るようにしてください
  */
 
-func test2(completion: /*ここに無名関数を受け取れる型を書こう*/) {
+func test2(completion: ((String)->Void)? = nil) {
     print("３秒後にcompletionが実行されるよ")
     let str = "Hello Test"
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {

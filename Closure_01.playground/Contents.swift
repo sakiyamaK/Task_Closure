@@ -5,7 +5,7 @@ import Foundation
  func test0()にvoid型の戻り値を書こう
  */
 
-func test0() /*ここに何か付け足す*/ {
+func test0() -> Void {
     print("この関数に戻り値はありません")
 }
 //実行
@@ -24,11 +24,9 @@ func test1() {
 test1()
 
 
-/* このコメントアウトを外して答えを書こう
-let closure1 = /*ここに無名関数を書こう*/
+let closure1 = { ()->Void in print("closureを学ぼう") }
  //実行
- clousre1()
-*/
+ closure1()
 
 
 /*
@@ -41,11 +39,11 @@ func test2(name: String) {
 }
 test2(name: "あいうえお")
 
-/* このコメントアウトを外して答えを書こう
- let closure2 = /*ここに無名関数を書こう*/
+let closure2 = { (name: String) -> Void in
+    print("\(name)さん！ closureを学ぼう")
+ }
  //実行
- clousre2(name: あいうえお)
- */
+closure2("あいうえお")
 
 
 /*
@@ -61,9 +59,9 @@ let rtnTest3 = test3(name: "あいうえお")
 print(rtnTest3)
 
 
-/* このコメントアウトを外して答えを書こう
-let closure3 = /*ここに無名関数を書こう*/
+let closure3 = { (name: String) -> String in
+    return "\(name)さん！ closureを学ぼう"
+}
 //実行
-let rtnCls3 = clousre3(name: あいうえお)
+let rtnCls3 = closure3("あいうえお")
 print(rtnCls3)
-*/
